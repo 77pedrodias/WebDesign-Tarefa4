@@ -3,16 +3,45 @@
     <head>
         <meta charset="utf-8">
         <title>Tarefa 04 - Webdesign</title>
+        <style>
+            body {
+                background-color: rgb(240, 240, 240);
+            }
+        
+            .paragrafo-midia {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color: rgb(0, 148, 148);
+            }
+
+            .container {
+                display: flex;        
+            }
+
+            .caixa {
+                flex: 1;
+                background: rgb(255, 255, 255);
+                margin: 5px;
+                border-radius: 2px;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <header>
 
         </header>
         <main>
-
+            <div class="container">
+                <div class="caixa">
+                    <p class="paragrafo-midia">Imagens</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="Logo do Github" width="100"><br>
+                    <img src="https://cdn-icons-png.flaticon.com/256/5968/5968242.png" alt="Logo do CSS"><br>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="Logo da HTML5" width="100"><br>
+                </div>
+            </div>
         </main>
         <footer>
-            
         </footer>
     </body>
 </html>
