@@ -8,35 +8,50 @@
                 background-color: rgb(240, 240, 240);
             }
         
+            p, li{
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: justify;
+            }
+
             .paragrafo-midia {
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: bold;
                 color: rgb(0, 148, 148);
-            }
-
-            .container {
-                display: flex;        
-            }
-
-            .caixa {
-                flex: 1;
-                background: rgb(255, 255, 255);
-                margin: 5px;
-                border-radius: 2px;
-                padding: 10px;
                 text-align: center;
+                
             }
 
-            .campo {
+            .container{
+                display: grid;   
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                padding-bottom: 0;
+                box-sizing: border-box;    
+                align-items: stretch; /*tamanho*/
+            }
+
+            .caixa{
+                background: rgb(255, 255, 255);
+                border-radius: 10px;
+                padding: 45px;
+                text-align: center;
+                height: 75%; 
+            }
+
+            .divFinal{
+                background: rgb(224, 224, 224);
+            }
+
+            .campo{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start; 
-                margin-bottom: 12px;  
+                margin-bottom: 1px;  
             }
 
             .campo label {
                 font-family: Arial, Helvetica, sans-serif;
-                margin-bottom: 4px; /* espaço entre label e input */
+                margin-bottom: 5px; /* espaço entre label e input */
             }
 
             #fenviar {
@@ -46,29 +61,63 @@
                 border-radius: 5px;
                 border: none;
                 cursor: pointer;
-                margin-top: 10px; 
+                align-self: center;
+                margin-bottom: 10px;
             }
             
             #fenviar:hover {
                 background-color: rgb(0, 100, 100);
             }
+
+            .destaque{
+                background-color: rgb(253, 244, 201);
+            }
+
+            .footer, .aula{
+                text-align: center;
+                font-size: medium;
+            }
+            
+            #introducao{
+                background: rgb(190, 218, 255);
+            }
+
+            #linha1{
+                background-color: rgb(158, 157, 157);
+            }
+
+            #tabela{
+                border-collapse: collapse;
+                margin: 20px auto;
+            }
+
+            th, td{
+                border: 1px solid black;
+                
+            }
         </style>
     </head>
     <body>
         <header>
-
+            <div class="aula">
+                <h3 class="paragrafo-midia">Aula 04 - Mídias em HTML</h3>
+            </div>
         </header>
+
         <main>
             <!--Imagens-->
             <div class="container">
+            <section>
                 <div class="caixa">
                     <p class="paragrafo-midia">Imagens</p>
-                    <img src="GitHub-logo.png" alt="Logo do Github" width="200" height="100"><br>
-                    <img src="csslogo.png" alt="Logo do CSS" width="120" height="150"><br>
-                    <img src="htmllogo.png" alt="Logo da HTML5" width="170" height="150"><br>
+                    <img src="GitHub-logo.png" alt="Logo do Github" width="100" height="50"><br>
+                    <img src="csslogo.png" alt="Logo do CSS" width="60" height="80"><br>
+                    <img src="htmllogo.png" alt="Logo da HTML5" width="90" height="80"><br>
                 </div>
+            </section>
 
                 <!--Vídeos-->
+            <section>
                 <div class="caixa"> 
                     <p class="paragrafo-midia">Vídeo</p> 
                         <video width="400" controls poster="capa-video.png">
@@ -76,8 +125,10 @@
                             Seu navegador não suporta vídeo em HTML5.
                         </video>
                 </div>
+            </section>
 
                 <!--Áudios-->
+            <section>
                 <div class="caixa">
                     <p class="paragrafo-midia">Áudio</p>
                     <audio controls>
@@ -89,8 +140,10 @@
                         Seu navegador não suporta a tag de áudio.
                     </audio>
                 </div>
+            </section>
 
                 <!--Formulário-->
+            <section>
                 <div class="caixa">
                     <p class="paragrafo-midia">Formulário</p>
                     <form id="formulario">
@@ -111,17 +164,22 @@
                         </div>
                     </form>
                 </div>
-                 <!--Links-->
+            </section>
+
+            <section>
+                <!--Links-->
                 <div class="caixa">
                     <p class="paragrafo-midia">Links</p>
                         <ul>
-                        <li><a href="https://www.google.com">Ir para o google</a></li>
                         <li><a href="https://www.instagram.com"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="botao-link" width="50"></a></li>
+                        <li><a href="https://www.google.com">Ir para o google</a></li>
                         <li><a href="https://www.openai.com" target="_blank">Abrir openAI em uma nova aba</a></li>
                     </ul>
                 </div>
+            </section> 
+
+            <section>    
                 <!--Listas-->
-                
                 <div class="caixa">
                     <p class="paragrafo-midia">Listas</p>
                     <ol>
@@ -135,11 +193,57 @@
                         <li>Item C</li>
                     </ul>
                 </div>
+            </section>
+
+            <section>
+                <!--Tabelas-->
+                <div class="caixa">
+                    <p class="paragrafo-midia">Tabelas</p>
+                    <table id="tabela">
+                        <thead>
+                            <tr id="linha1">
+                                <th>Coluna 1</th>
+                                <th>Coluna 2</th>
+                                <th>Coluna 3</th>
+                            </tr>
+                            <tbody>
+                                <td>Linha 1</td>
+                                <td>Dado 1</td>
+                                <td>Dado 2</td>
+                            </tbody>
+                            <tbody>
+                                <td>Linha 2</td>
+                                <td>Dado 3</td>
+                                <td>Dado 4</td>
+                            </tbody>
+                        </thead>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <!--Introdução-->
+                <div class="caixa">
+                    <h3 class="paragrafo-midia">Identificadores e classes</h3>
+                    <p id="introducao">Paragráfo com ID "introducao"</p>
+                    <p class="destaque">Parágrafo com classe "destaque"</p>
+                    <p class="destaque">Parágrafo com classe "destaque"</p>
+
+                    <div class="divFinal">
+                    <h3 class="paragrafo-midia">Div container</h3>
+                    <p>Parágrafo 1 dentro do container.</p>
+                    <p>Parágrafo 2 dentro do container.</p>
+                </div>
+                </div>
             
-            
+            </section>
+
             </div>
         </main>
+
+        <!--Rodapé-->
         <footer>
+            <p class="footer">© 2025 - Aula 04</p>
         </footer>
     </body>
 </html>
